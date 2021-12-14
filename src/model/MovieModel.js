@@ -2,8 +2,8 @@ const db = require("../database/models");
 
 const MovieModel = {
   findAll: () => {
-    let movie = db.Movies.findAll()
-    return movie
+    let movies = db.Movies.findAll()
+    return movies
       .then((res) => {
         return res;
       })
@@ -13,8 +13,8 @@ const MovieModel = {
   },
 
   findById: (id) => {
-    let movie = db.Movies.findById(id);
-    return movie
+    let movies = db.Movies.findById(id);
+    return movies
       .then((res) => {
         return res;
       })
@@ -22,5 +22,6 @@ const MovieModel = {
         return err
        } );
   },
+  
 };
 module.exports = MovieModel;
