@@ -8,41 +8,41 @@ module.exports = (sequelize, DataType) => {
         timestamps: false
     };
     
-    const columns = {
+    const cols = {
         id: {
             autoIncrement: true,
             allowNull: false,
             primaryKey: true,
-            type: dataType.INTEGER
+            type: DataType.INTEGER
         },
 
         title: {
             allowNull: false,
-            type: dataType.STRING
+            type: DataType.STRING
         },
         rating: {
             allowNull: false,
-            type: dataType.DOUBLE
+            type: DataType.DOUBLE
         },
         awards: {
             allowNull: false,
-            type: dataType.DOUBLE
+            type: DataType.DOUBLE
         },
         release_date: {
             allowNull: false,
-            type: dataType.DATE
+            type: DataType.DATE
         },
         length: {
             allowNull: false,
-            type: dataType.DOUBLE
+            type: DataType.DOUBLE
         },
     }
 
-    const options = {
+    const alias = {
         timestamps: false
     }
 
-    const Movie = sequelize.define(movies, cols, config);
+    const Movie = sequelize.define(movies, cols, alias);
 
     return Movie;
 }

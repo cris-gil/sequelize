@@ -2,7 +2,7 @@ const db = require("../database/models");
 
 const MovieModel = {
   findAll: () => {
-    let movie = db.Movies.findAll();
+    let movie = db.Movies.findAll()
     return movie
       .then((res) => {
         return res;

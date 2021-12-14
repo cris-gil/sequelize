@@ -8,7 +8,7 @@ module.exports = (sequelize, DataType) => {
         timestamps: false
     };
     const genresModel = 'Genres'
-    const genres = {
+    const cols = {
         id: {
             autoIncrement: true,
             allowNull: false,
@@ -38,11 +38,11 @@ module.exports = (sequelize, DataType) => {
         },
     }
 
-    const options = {
+    const aliass = {
         timestamps: false
     }
 
-    const Genre = sequelize.define(genres, cols, config);
+    const Genre = sequelize.define(genres, cols, alias);
 
     return Genre;
 }
